@@ -1,41 +1,64 @@
 <template>
-  <div>
+  <div class="user-details-container">
     <h1>Show User</h1>
-    <p>ID: {{ user.id }} </p>
-    <p>Name: {{ user.id }} </p>
-    <p>Lastname: {{ user.lastname }} </p>
-    <p>Email: {{ user.email }}</p>
-    <p>Password: {{ user.password }}</p>
-    <p>Status: {{ user.status }}</p>
-    <p>Type: {{ user.type }}</p>
-    <p>Created At: {{ user.createdAt }}</p>
+    <div class="user-info">
+      <p><span>ID:</span> {{ user.id }}</p>
+      <p><span>Name:</span> {{ user.name }}</p>
+      <p><span>Lastname:</span> {{ user.lastname }}</p>
+      <p><span>Email:</span> {{ user.email }}</p>
+      <p><span>Password:</span> {{ user.password }}</p>
+    </div>
   </div>
 </template>
 
 <script>
 import UsersService from "@/services/UsersService";
 
-export default { 
-  data(){
+export default {
+  data() {
     return {
       user: {}
-    }
+    };
   },
   async created() {
-    try{
-      var userId = this.$route.params.userId;
+    try {
+      const userId = this.$route.params.userId;
       this.user = (await UsersService.show(userId)).data;
-    }catch(err){
+    } catch (err) {
       console.log(err);
     }
-    
-    // console.log(this.user);
   },
-  
-
-}
+};
 </script>
 
-<style>
+<style scoped>
+.user-details-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+h1 {
+  font-size: 2em;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.user-info p {
+  font-size: 1em;
+  color: #555;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.user-info span {
+  font-weight: bold;
+  color: #333;
+  display: inline-block;
+  width: 100px;
+}
 </style>

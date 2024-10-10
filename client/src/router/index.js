@@ -7,12 +7,12 @@ import UserCreate from '@/components/User/CreateUser'
 import UserShow from '@/components/User/ShowUser'
 import Login from '@/components/Login'
 
-import CommentIndex from '@/components/Comments/index' 
+import ProductIndex from '@/components/Products/index'
+import ProductCreate from '@/components/Products/CreateProduct'
+import ProductShow from '@/components/Products/ShowProduct'
+import ProductEdit from '@/components/Products/EditProduct'
+import ProductAll from '@/components/Products/ShowAllProduct'
 
-import BlogIndex from '@/components/Blogs/index'
-import BlogCreate from '@/components/Blogs/CreateBlog'
-import BlogShow from '@/components/Blogs/ShowBlog'
-import BlogEdit from '@/components/Blogs/EditBlog'
 
 Vue.use(Router)
 
@@ -45,29 +45,30 @@ export default new Router({
       component: Login
     },
     {
-      path: '/blogs',
-      name: 'blogs',
-      component: BlogIndex
+      path: '/products',
+      name: 'products',
+      component: ProductIndex
     },
     {
-      path: '/blog/create',
-      name: 'blog-create',
-      component: BlogCreate
+      path: '/product/create',
+      name: 'product-create',
+      component: ProductCreate
     },
     {
-      path: '/blog/edit/:blogId',
-      name: 'blog-edit',
-      component: BlogEdit
+      path: '/product/edit/:productId',
+      name: 'product-edit',
+      component: ProductEdit
     },
     {
-      path: '/blog/:blogId',
-      name: 'blog',
-      component: BlogShow
+      path: '/product/:productId',
+      name: 'product',
+      component: ProductShow
     },
     {
-      path: '/comments',
-      name: 'comments',
-      component: CommentIndex
+      path: '/allproduct',
+      name: 'allproduct',
+      component: ProductAll
     },
+    
   ]
 })

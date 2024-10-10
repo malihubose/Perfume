@@ -6,7 +6,7 @@ module.exports = {
         password: process.env.DB_PASS || '',
         options: {
             dialect: process.env.DIALECT || 'sqlite',
-            storage: './nvwebblog-db.sqlite'
+            storage: './perfume-db.sqlite'
         },
     },
     authentication:{
