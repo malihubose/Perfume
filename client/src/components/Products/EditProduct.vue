@@ -7,7 +7,7 @@
             </div>
 
             <div class="form-group">
-                <label>Title:</label>
+                <label>Name:</label>
                 <input type="text" v-model="product.title" placeholder="Enter product title">
             </div>
 
@@ -22,7 +22,6 @@
                     <option value="dior">Dior</option>
                     <option value="ysl">YSL</option>
                     <option value="chanel">Chanel</option>
-                    <option value="coco">Coco</option>
                     <option value="jo malone">Jo Malone London</option>
                     <option value="lancome">Lancôme</option>
                 </select>

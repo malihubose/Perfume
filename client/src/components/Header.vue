@@ -8,6 +8,7 @@
       <ul class="nav-right">
         <li><router-link :to="{ name: 'login' }">Login</router-link></li>
         <li><router-link :to="{ name: 'users' }" class="signup-button">Users</router-link></li>
+        <li><a v-on:click.prevent="logout" href="#">Logout</a></li>
       </ul>
     </div>
   </div>

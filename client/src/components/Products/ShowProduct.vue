@@ -1,7 +1,7 @@
 <template>
     <div class="product-container">
         <!-- Back Button -->
-        <button class="back-button" v-on:click="navigateTo('/allproduct')">Back</button>
+        <button class="back-button" v-on:click="navigateTo('/products')">Back</button>
 
         <!-- Product Display Section -->
         <div class="product-display">

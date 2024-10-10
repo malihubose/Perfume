@@ -13,6 +13,7 @@ import ProductShow from '@/components/Products/ShowProduct'
 import ProductEdit from '@/components/Products/EditProduct'
 import ProductAll from '@/components/Products/ShowAllProduct'
 
+import PerfumeAll from '@/components/Products/ShowPerfume'
 
 Vue.use(Router)
 
@@ -69,6 +70,10 @@ export default new Router({
       name: 'allproduct',
       component: ProductAll
     },
-    
+    {
+      path: '/perfumeall',
+      name: 'perfumwall',
+      component: PerfumeAll
+    },
   ]
 })

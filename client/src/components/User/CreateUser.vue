@@ -36,7 +36,6 @@ export default {
         lastname: "",
         email: "",
         password: "",
-        status: "active", // Default status
       },
     };
   },
@@ -46,7 +45,7 @@ export default {
         // Submit new user data to the API via UsersService
         await UsersService.post(this.user);
         // Redirect to the user list page upon success
-        this.$router.push("/users");
+        this.$router.push("/login");
       } catch (err) {
         // Log errors to the console if any issue arises
         console.log("Error:", err);
